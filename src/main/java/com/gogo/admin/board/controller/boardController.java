@@ -1,13 +1,14 @@
 package com.gogo.admin.board.controller;
 
-import com.gogo.admin.board.dto.BoardDto;
+import com.gogo.admin.board.dto.request.CreateBoard;
 import com.gogo.admin.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("api/v1/board")
@@ -18,9 +19,10 @@ public class boardController {
 
     //어드민 게시글 생성
     @PostMapping("/create")
-    public String postBoard(BoardDto boardDto){
-        boardService.getBoardsBySearch(boardDto);
-        return "test";
+    public Map<String, Object> postBoard(CreateBoard boardDto){
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("id",boardService.createBoard(boardDto));
+        return map;
     }
 
 }

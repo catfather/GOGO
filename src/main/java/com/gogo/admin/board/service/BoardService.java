@@ -1,7 +1,10 @@
 package com.gogo.admin.board.service;
 
+import com.gogo.admin.board.dto.request.SearchcriteriaBoard;
+import com.gogo.admin.board.dto.response.BoardListRes;
+import com.gogo.admin.board.repository.BoardCustomRepository;
 import com.gogo.admin.board.repository.BoardRepository;
-import com.gogo.admin.board.dto.BoardDto;
+import com.gogo.admin.board.dto.request.CreateBoard;
 import com.gogo.admin.board.entity.BoardEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,13 +14,24 @@ import org.springframework.stereotype.Service;
 public class BoardService {
 
     private final BoardRepository boardRepository;
+    private final BoardCustomRepository boardCustomRepository;
 
-    public String getBoardsBySearch(BoardDto boardDto) {
+
+    //게시글 생성
+    public Long createBoard(CreateBoard boardDto) {
 
         BoardEntity boardEntity = new BoardEntity();
-        boardEntity.Board(boardDto.getTitle(), boardDto.getContent(), boardDto.getWriter());
-        boardEntity = boardRepository.save(boardEntity);
+        //게시글 생성
+        boardEntity.BoardCreate(boardDto.getTitle(), boardDto.getContent(), boardDto.getWriter(), boardDto.getType());
+        Long id = boardRepository.save(boardEntity).getId();
 
 
+        return id;
+    }
+
+    //게시믈 검색
+    public BoardListRes getBoardList(SearchcriteriaBoard criteria){
+        boardCustomRepository.findBoardList(criteria);
+        return null;
     }
 }

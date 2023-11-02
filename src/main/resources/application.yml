@@ -1,14 +1,11 @@
-# git ??? ?? ???
+# git 올릴때 빼고 올릴것
 server:
-  port: 8095
-  # ????
-  main:
-    allow-bean-definition-overriding: true
-    allow-circular-references: true
+  port: 8090
 
+spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://project1.cxg8vdlfu0la.ap-southeast-2.rds.amazonaws.com:3306/dev
+    url: jdbc:mysql://project1.cxg8vdlfu0la.ap-southeast-2.rds.amazonaws.com:3306/gogo
     username: admin
     password: '00000000'
   #    url: jdbc:mysql://localhost:3306/project02
@@ -23,3 +20,4 @@ server:
       hibernate:
         show_sql: true
         format_sql: true
+        globally_quoted_identifiers: true # 예약어 컬럼 사용
