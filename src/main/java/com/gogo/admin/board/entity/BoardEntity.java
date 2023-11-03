@@ -1,17 +1,19 @@
 package com.gogo.admin.board.entity;
 
 import com.gogo.admin.board.entity.utill.BoardType;
+import com.gogo.admin.utill.BaseEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "board_tb")
-public class BoardEntity {
+public class BoardEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,5 +33,9 @@ public class BoardEntity {
     }
 
     public void BoardCreate(String title, String content, String writer, BoardType type) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.boardType = type;
     }
 }

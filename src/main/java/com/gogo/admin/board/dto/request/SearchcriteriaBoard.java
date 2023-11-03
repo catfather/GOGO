@@ -11,6 +11,7 @@ import java.time.LocalDate;
 public class SearchcriteriaBoard {
     private Long id;
     private String title;
+    private String content;
     private String writer;
     private LocalDate start; //시작일
     private LocalDate end; //끝일

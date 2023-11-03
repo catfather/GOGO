@@ -10,6 +10,9 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Repository
@@ -30,10 +33,23 @@ public class BoardRepositoryImpl implements BoardCustomRepository {
                 .where(
                         IdEq(criteria.getId()),
                         TitleCt(criteria.getTitle()),
+                        ContentCt(criteria.getContent()),
                         WriterCt(criteria.getWriter()),
-                        DateBecriteria.getStart()
+                        DateBetween(criteria.getStart(),criteria.getEnd())
                 )
+                .orderBy(qBoardEntity.createTime.desc())
                 .fetch();
+    }
+
+    private BooleanExpression ContentCt(String content) {
+        return content != null ? qBoardEntity.content.contains(content) : null;
+    }
+
+    private BooleanExpression DateBetween(LocalDate start, LocalDate end) {
+        if (start != null && end != null){
+            return qBoardEntity.createTime.between(start.atStartOfDay(), end.atTime(LocalTime.MAX));
+        }
+        return null;
     }
 
     private BooleanExpression WriterCt(String writer) {
