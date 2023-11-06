@@ -1,6 +1,6 @@
 package com.gogo.admin.board.dto.response;
 
-import com.gogo.admin.board.entity.utill.BoardType;
+import com.gogo.admin.board.entity.utill.BOARDTYPE;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,9 +22,12 @@ public class BoardRes {
 
     private String writer;
 
-    private BoardType boardType;
-
+    private BOARDTYPE boardType;
+    private Integer isDisPlay;
+    private Integer isDeleted;
     private LocalDateTime createTime;
+
+
 
 
 }

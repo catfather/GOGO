@@ -1,5 +1,5 @@
 package com.gogo.admin.board.entity.utill;
 
-public enum BoardType {
+public enum BOARDTYPE {
     NOTICE,BOARD
 }
