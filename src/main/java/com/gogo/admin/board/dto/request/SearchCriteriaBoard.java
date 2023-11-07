@@ -34,6 +34,4 @@ public class SearchCriteriaBoard {
             this.isDeleted = 0;
         }
     }
-
-
 }

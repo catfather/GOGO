@@ -39,5 +39,7 @@ public class BoardController {
                                             @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 
         return Collections.singletonMap("result", boardService.getBoardList(criter, pageable));
+
     }
+
 }

@@ -26,6 +26,7 @@ public class BoardRes {
     private Integer isDisPlay;
     private Integer isDeleted;
     private LocalDateTime createTime;
+    private String img;
 
 
 

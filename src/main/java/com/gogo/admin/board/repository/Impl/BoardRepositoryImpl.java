@@ -25,23 +25,6 @@ public class BoardRepositoryImpl implements BoardCustomRepository {
 
     QBoardEntity qBoardEntity = QBoardEntity.boardEntity;
 
-
-    @Override
-    public List<BoardEntity> findBoardList(SearchCriteriaBoard criteria) {
-        return jpaQueryFactory
-                .select(qBoardEntity)
-                .from(qBoardEntity)
-                .where(
-                        IdEq(criteria.getId()),
-                        TitleCt(criteria.getTitle()),
-                        ContentCt(criteria.getContent()),
-                        WriterCt(criteria.getWriter()),
-                        DateBetween(criteria.getStart(), criteria.getEnd())
-                )
-                .orderBy(Order(criteria.getOrder()))
-                .fetch();
-    }
-
     @Override
     public List<BoardEntity> findBoardList(SearchCriteriaBoard criteria, Pageable pageable) {
         return jpaQueryFactory
