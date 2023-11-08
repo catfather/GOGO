@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
-public class Member {
+public class MemberEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +33,7 @@ public class Member {
     private Role role;
 
     private String profileImage;
+
+    public MemberEntity(Long memberId) {
+    }
 }

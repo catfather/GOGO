@@ -1,7 +1,7 @@
 package com.gogo.admin.product.dto.request;
 
 
-import com.gogo.admin.member.entity.Member;
+import com.gogo.admin.member.entity.MemberEntity;
 import com.gogo.admin.product.entity.ProductEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,8 +21,7 @@ public class ProductReq {
     @NotNull(message = "가격은 필수 입니다")
     private Integer price;
     @NotNull(message = "작성자는 필수 입니다")
-    @JoinColumn(name = "memberId")
-    private Integer memberId;
+    private Long memberId;
     @NotNull(message = "노출 여부는 필수 입니다")
     private Integer isDisplay; // 0: 미노출, 1: 노출
     @NotNull(message = "이벤트 여부는 필수 입니다")
@@ -33,7 +32,7 @@ public class ProductReq {
                 .title(productReq.getTitle())
                 .description(productReq.getDescription())
                 .price(productReq.getPrice())
-                .memberId(productReq.getMemberId())
+                .memberId(new MemberEntity(productReq.getMemberId()))
                 .isDisplay(productReq.getIsDisplay())
                 .isEvent(productReq.getIsEvent())
                 .build();

@@ -30,6 +30,8 @@ public class ProductSearchCriteria {
 
     private Integer isDisplay; // 0: 미노출, 1: 노출
 
+    private Integer isDeleted; // 0: 삭제 안됨, 1: 삭제 됨
+
     //나중에 예약 가능한 날짜만 추려서 보여주면 좋을꺼같음
 
 
