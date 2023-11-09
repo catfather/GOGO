@@ -20,7 +20,6 @@ public class SearchCriteriaBoard {
     private Integer isDeleted; //삭제 처리
     private Integer isDisplay; // 비활성화 처리
 
-
     public SearchCriteriaBoard(){
         if(this.order == null){
             this.order = ORDER.DESC;

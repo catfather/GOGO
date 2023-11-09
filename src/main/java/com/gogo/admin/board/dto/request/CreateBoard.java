@@ -17,6 +17,8 @@ public class CreateBoard {
     private String content; //내용
     @NotNull(message = "작성자는 필수 입니다")
     private String writer; //작성자
+    @NotNull(message = "memberId 는 필수 입니다")
+    private Integer memberId; //작성자
     @NotNull(message = "타입은 필수 입니다")
     private BOARDTYPE type; //공지사항, 글 유형 기타 등등
     @NotNull(message = "활성화 여부는 필수 입니다")

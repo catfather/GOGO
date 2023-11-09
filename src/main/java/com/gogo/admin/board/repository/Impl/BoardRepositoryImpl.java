@@ -86,6 +86,7 @@ public class BoardRepositoryImpl implements BoardCustomRepository {
 
     private BooleanExpression IdEq(Long id) {
         return id != null ? qBoardEntity.id.eq(id) : null;
+
     }
 
 

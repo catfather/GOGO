@@ -48,13 +48,14 @@ public class BoardEntity extends BaseEntity {
                 .build();
     }
 
-    public void Update(UpdateBoard board) {
-        this.title = board.getTitle();
+    public BoardEntity Update(UpdateBoard board) {
         this.id = board.getId();
+        this.title = board.getTitle();
         this.content = board.getContent();
         this.boardType = board.getBoardType();
         this.isDisplay = board.getIsDisPlay();
         super.setIsDeleted(board.getIsDelete());
+        return this;
     }
 
     public BoardEntity(CreateBoard board) {

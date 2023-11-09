@@ -33,7 +33,6 @@ public class ProductEntity extends BaseEntity {
     @Column(nullable = false)
     private Integer price;
 
-
     @ManyToOne
     @JoinColumn(name = "member_id")
     private MemberEntity memberId;

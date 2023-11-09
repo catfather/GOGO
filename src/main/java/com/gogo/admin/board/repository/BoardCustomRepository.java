@@ -12,4 +12,6 @@ public interface BoardCustomRepository {
 //    List<BoardEntity> findBoardList(SearchCriteriaBoard criteria);
 
     List<BoardEntity> findBoardList(SearchCriteriaBoard criteria, Pageable pageable);
+
+
 }

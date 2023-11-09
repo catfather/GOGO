@@ -39,8 +39,7 @@ public class BoardService {
     //게시글 업데이트
     public Long updateBoard(UpdateBoard update) {
         BoardEntity originBoard = boardRepository.findById(update.getId()).orElseThrow(IllegalAccessError::new);
-        originBoard.Update(update);
-        return boardRepository.save(originBoard).getId();
+        return boardRepository.save(originBoard.Update(update)).getId();
     }
 
     private BoardRes of(BoardEntity boardEntity) {
