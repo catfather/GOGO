@@ -35,5 +35,6 @@ public class MemberEntity {
     private String profileImage;
 
     public MemberEntity(Long memberId) {
+        this.id = memberId;
     }
 }

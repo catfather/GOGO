@@ -29,7 +29,7 @@ public class BoardController {
 
     //수정
     @PostMapping("/update")
-    public Map<String, Object> updateBoard(@RequestBody UpdateBoard updateBoardReq) {
+    public Map<String, Object> updateBoard(@Validated @RequestBody UpdateBoard updateBoardReq) {
         return Collections.singletonMap("result", boardService.updateBoard(updateBoardReq));
     }
 

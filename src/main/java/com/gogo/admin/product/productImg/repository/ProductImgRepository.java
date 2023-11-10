@@ -1,6 +1,6 @@
-package com.gogo.admin.ProductImg.repository;
+package com.gogo.admin.product.productImg.repository;
 
-import com.gogo.admin.ProductImg.entity.ProductImgEntity;
+import com.gogo.admin.product.productImg.entity.ProductImgEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

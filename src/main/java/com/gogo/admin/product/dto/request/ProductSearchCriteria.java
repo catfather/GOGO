@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class ProductSearchCriteria {
 
-    private Long Id;
+    private Long id;
 
     private String title;
 

@@ -1,4 +1,4 @@
-package com.gogo.admin.ProductImg.entity;
+package com.gogo.admin.product.productImg.entity;
 
 import com.gogo.admin.product.entity.ProductEntity;
 import lombok.*;

@@ -1,6 +1,6 @@
 package com.gogo.admin.board.service;
 
-import com.gogo.admin.ProductImg.service.S3ImgService;
+import com.gogo.admin.product.productImg.service.S3ImgService;
 import com.gogo.admin.board.dto.request.SearchCriteriaBoard;
 import com.gogo.admin.board.dto.request.UpdateBoard;
 import com.gogo.admin.board.dto.response.BoardRes;

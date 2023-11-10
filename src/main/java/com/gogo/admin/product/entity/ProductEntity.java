@@ -2,6 +2,7 @@ package com.gogo.admin.product.entity;
 
 
 import com.gogo.admin.member.entity.MemberEntity;
+import com.gogo.admin.product.dto.request.ProductUpReq;
 import com.gogo.admin.utill.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -45,7 +46,18 @@ public class ProductEntity extends BaseEntity {
     @ColumnDefault("0")
     private Integer isEvent; // 0: 이벤트 아님, 1: 이벤트
 
+    public ProductEntity(Long productId) {
+    }
 
 
-
+    public ProductEntity Update(ProductUpReq productUpReq) {
+        this.id = productUpReq.getId();
+        this.title = productUpReq.getTitle();
+        this.description = productUpReq.getDescription();
+        this.price = productUpReq.getPrice();
+        this.isDisplay = productUpReq.getIsDisplay();
+        this.isEvent = productUpReq.getIsEvent();
+        super.setIsDeleted(productUpReq.getIsDeleted());
+        return this;
+    }
 }

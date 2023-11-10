@@ -1,9 +1,9 @@
-package com.gogo.admin.ProductImg.service;
+package com.gogo.admin.product.productImg.service;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.gogo.admin.ProductImg.entity.ProductImgEntity;
-import com.gogo.admin.ProductImg.repository.ProductImgRepository;
+import com.gogo.admin.product.productImg.entity.ProductImgEntity;
+import com.gogo.admin.product.productImg.repository.ProductImgRepository;
 import com.gogo.admin.product.entity.ProductEntity;
 import com.gogo.admin.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;

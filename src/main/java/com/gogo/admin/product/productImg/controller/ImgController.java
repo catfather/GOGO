@@ -1,6 +1,6 @@
-package com.gogo.admin.ProductImg.controller;
+package com.gogo.admin.product.productImg.controller;
 
-import com.gogo.admin.ProductImg.service.S3ImgService;
+import com.gogo.admin.product.productImg.service.S3ImgService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

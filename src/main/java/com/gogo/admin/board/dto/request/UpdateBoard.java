@@ -20,9 +20,9 @@ public class UpdateBoard {
     private String content;
     @NotNull
     private BOARDTYPE boardType;
-
+    @NotNull
     private Integer isDelete;
-
+    @NotNull
     private Integer isDisPlay;
 
 }
