@@ -1,0 +1,41 @@
+@import "../../css/reset.css";
+
+
+body{
+    background-image: url("https://gogo-img.s3.ap-northeast-2.amazonaws.com/main-backGround.jpg");
+}
+
+.loginBox {
+    background-color: bisque;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+
+    /*수직 중앙 정렬*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.loginBox .main {
+    background-color: aqua;
+    padding: 15px;
+}
+
+.loginBox .main ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.loginBox .main ul li {
+    padding: 10px;
+}
+
+.loginBox .main ul li input {
+
+
+}

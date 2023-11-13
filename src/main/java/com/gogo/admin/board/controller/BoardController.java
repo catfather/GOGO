@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/admin/board")
 @RequiredArgsConstructor
 public class BoardController {
 

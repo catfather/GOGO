@@ -15,9 +15,6 @@ import javax.validation.constraints.NotNull;
 public class CommentCreate {
 
     @NotNull
-    private ProductEntity productId;
-
-    @NotNull
     private String content;
 
     @NotNull

@@ -47,6 +47,7 @@ public class ProductEntity extends BaseEntity {
     private Integer isEvent; // 0: 이벤트 아님, 1: 이벤트
 
     public ProductEntity(Long productId) {
+        this.id = productId;
     }
 
 

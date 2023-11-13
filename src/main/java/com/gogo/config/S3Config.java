@@ -32,11 +32,11 @@ public class S3Config {
         return (AmazonS3Client) AmazonS3ClientBuilder
                 .standard()
                 .withRegion(region)
-//                .withCredentials(new AWSStaticCredentialsProvider(credentials))
-//                .withClientConfiguration(new ClientConfiguration()
-//                        .withConnectionTimeout(10000) // 연결 타임아웃 설정 (5초로 설정)
-//                        .withRequestTimeout(10000)   // 요청 타임아웃 설정 (5초로 설정)
-//                        .withSocketTimeout(10000))   // 소켓 타임아웃 설정 (5초로 설정)
+                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+                .withClientConfiguration(new ClientConfiguration()
+                        .withConnectionTimeout(10000) // 연결 타임아웃 설정 (5초로 설정)
+                        .withRequestTimeout(10000)   // 요청 타임아웃 설정 (5초로 설정)
+                        .withSocketTimeout(10000))   // 소켓 타임아웃 설정 (5초로 설정)
                 .build();
     }
 
